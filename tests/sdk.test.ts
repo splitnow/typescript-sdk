@@ -115,10 +115,10 @@ describe('Orders', () => {
   })
 
   it(`getOrderStatus (GET /orders/{id})`, async () => {
-    const orderStatus = await splitnow.getOrder({
+    const orderStatus = await splitnow.getOrderStatus({
       orderId: orderId
     })
 
-    expect(orderStatus.statusShort === 'pending').toBe(true)
+    expect(orderStatus.orderStatusShort === 'pending').toBe(true)
   })
 })
