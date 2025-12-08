@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "splitnow": "npm:splitnow@^1.0.0"
+  }
+}

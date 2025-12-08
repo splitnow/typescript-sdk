@@ -1,0 +1,39 @@
+{
+  "name": "splitnow",
+  "version": "1.0.0",
+  "description": "TypeScript SDK (API wrapper) for SplitNOW, the multi-wallet instant crypto exchange. 🪼",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "bun run build:esm && bun run build:cjs",
+    "build:esm": "bun build src/index.ts --outdir dist --target node --format esm && tsc --emitDeclarationOnly --outDir dist",
+    "build:cjs": "bun build src/index.ts --outfile dist/index.cjs --target node --format cjs",
+    "prepublishOnly": "bun run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["crypto", "exchange", "splitnow", "sdk"],
+  "author": "SplitOTC, Ltd",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "bun-types": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/splitnow/typescript-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/splitnow/typescript-sdk/issues"
+  },
+  "homepage": "https://github.com/splitnow/typescript-sdk#readme"
+}
