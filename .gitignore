@@ -1,0 +1,23 @@
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor Files
+*.swp
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+
+# Bun
+bun.lock
+
+# NPM
+package-lock.json
+
+# Yarn
+yarn.lock
