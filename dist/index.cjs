@@ -103,7 +103,7 @@ class SplitNOW {
       rates: quote.quoteLegs.map((quoteLeg) => {
         const exchangeRate = {
           exchangeId: quoteLeg.quoteLegOutput.toExchangerId,
-          exchangeRate: Number((quoteLeg.quoteLegOutput.toAmount * 99 / 100).toFixed(3))
+          exchangeRate: Number(quoteLeg.quoteLegOutput.toAmount)
         };
         return exchangeRate;
       })
